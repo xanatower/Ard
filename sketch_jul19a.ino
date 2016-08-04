@@ -16,7 +16,7 @@ void loop() {
 int microphone_update(){
   int sensorValue = analogRead (A5);
   int brightness = map(sensorValue, 1,255, 1, 5);
-  brightness = constrain(brightness, 0, 255);
+  brightness = constrain(brightness, 1,5);
 // Serial.println(brightness);
   //analogWrite(ledPin, brightness);
   return brightness;
